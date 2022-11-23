@@ -31,7 +31,7 @@ const postSlice = createSlice({
       state.loading = false;
       state.records = action.payload;
       console.log(action.payload);
-      // state.records.push(...action.payload);
+      state.records = action.payload;
     },
     [fetchPosts.rejected]: (state, action) => {
       state.loading = false;

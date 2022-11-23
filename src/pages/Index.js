@@ -6,15 +6,13 @@ import PostList from "../components/PostList";
 
 const Index = () => {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts);
-  console.log(posts);
+  const { records, loading, error } = useSelector((state) => state.posts);
 
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
 
-  console.log(posts);
-  return <PostList />;
+  return <PostList data={records} loading={loading} error={error} />;
 };
 
 export default Index;

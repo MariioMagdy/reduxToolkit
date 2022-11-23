@@ -7,7 +7,7 @@ import {
   ButtonGroup,
 } from "react-bootstrap";
 
-export const PostList = ({ data }) => {
+const PostList = ({ data }) => {
   return (
     <Table striped bordered hover>
       <thead>
@@ -32,3 +32,5 @@ export const PostList = ({ data }) => {
     </Table>
   );
 };
+
+export default PostList;

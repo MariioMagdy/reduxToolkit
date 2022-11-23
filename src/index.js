@@ -16,13 +16,14 @@ import { PostList } from "./components/PostList";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Provider } from "react-redux";
 import store from "./state";
+import Index from "./pages/Index";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <PostList /> },
+      { index: true, element: <Index /> },
       {
         path: "post/add",
         element: <Add />,

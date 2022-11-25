@@ -1,7 +1,12 @@
 import React from "react";
 import { Button, ButtonGroup } from "react-bootstrap";
 
-export const PostListItem = ({ data, loading, error }) => {
+export const PostListItem = ({ data, loading, error, deleteRecord }) => {
+  const deleteHandler = (item) => {
+    if (window.confirm("Are your sure that you want to Delete this item ?")) {
+      deleteRecord(item.id);
+    }
+  };
   return (
     <>
       {loading ? (
@@ -21,7 +26,12 @@ export const PostListItem = ({ data, loading, error }) => {
               <td>
                 <ButtonGroup aria-label="Basic example">
                   <Button variant="success">Edit</Button>
-                  <Button variant="danger">Delete</Button>
+                  <Button
+                    variant="danger"
+                    onClick={() => deleteHandler(element)}
+                  >
+                    Delete
+                  </Button>
                 </ButtonGroup>
               </td>
             </tr>

@@ -1,20 +1,20 @@
 {
-    "posts":[
-        {
-        "id":1,
-        "title":"this is first title",
-        "description":"this is first Des"
-    },
-    {
+  "posts": [
+      {
+      "id":1,
+      "title":"first",
+      "description":"this is the first one "
+      },
+      {
         "id":2,
-        "title":"this is second title",
-        "description":"this is second Des"
-    },
-    {
+        "title":"second",
+        "description":"this is the second one "
+      },
+      {
         "id":3,
-        "title":"this is third title",
-        "description":"this is third Des"
-    }
+          "title":"third",
+          "description":"this is the third one "
+      }
 
-]
+  ]
 }
